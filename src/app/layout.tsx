@@ -29,16 +29,17 @@ export default function RootLayout({
   return (
     <ConvexClerkProvider>
       <html lang="en">
-        <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
           <Navbar />
 
           {/* GRID BACKGROUND */}
-          <div className="fixed inset-0 -z-1">
+          <div className="-z-1 fixed inset-0">
             <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-background"></div>
             <div className="absolute inset-0 bg-[linear-gradient(var(--cyber-grid-color)_1px,transparent_1px),linear-gradient(90deg,var(--cyber-grid-color)_1px,transparent_1px)] bg-[size:20px_20px]"></div>
           </div>
 
-          <main className="pt-24 flex-grow">{children}</main>
+          <main className="flex-grow pt-24">{children}</main>
           <Footer />
         </body>
       </html>
